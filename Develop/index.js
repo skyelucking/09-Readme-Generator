@@ -1,102 +1,125 @@
-// const inquirer = require('inquirer');
-// const fs = require('fs');
-// const util = require('util');
-// const writeFileAsync = util.promisify(fs.writeFile);
+const inquirer = require('inquirer');
+const fs = require('fs');
+const util = require('util');
 
 
-array of questions for user
-const questions = [
+const writeFileAsync = util.promisify(fs.writeFile);
 
-];
+const promptUser = () => {
+  return inquirer.prompt([
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your project?',
+      },
+    {
+      type: 'input',
+      name: 'description',
+      message: 'Provide a description of your project:',
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Provide installation instructions for your project:',
+      },
+      {
+        type: 'input',
+        name: 'usage',
+        message: 'Provide a usage information for your project:',
+      },
+      {
+        type: 'input',
+        name: 'contribution',
+        message: 'Provide a contribution guidelines for your project:',
+      },
+      {
+        type: 'input',
+        name: 'test_instructions',
+        message: 'Provide a test instructions for your project:',
+      },
+    {
+      type: 'input',
+      name: 'gituser',
+      message: 'Please provide your GitHub username:',
+    },
+    {
+      type: 'input',
+      name: 'email',
+      message: 'Please provide your email address:',
+    },
+    {
+        type: 'list',
+        message: 'What usage license does this software fall under?',
+        name: 'license',
+        choices: [
+            "MIT",
+            "GNU",
+            "ISC",
+            "Mozilla",
+            "Unlicense",
+        ],
+      },
+        
+  ]);
+};
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+const gernateReadMe = (answers) =>
 
-// function to initialize program
-function init() {
+`
 
-}
++-+-+-+-+-+-+ Software License -+-+-+-+-+-+-+-+-+-+
 
-// function call to initialize program
+${answers.license}: 
+
+=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
+# Table of Contents for ${answers.title} # 
+* [Description](##Description "Project Description")
+* [Installation](##Installation "Project Installation")
+* [Usage](##Usage "Usage Guidlines")
+* [Testing Guidelines](##Tests  "Testing Guidelines")
+* [Questions](##Questions  "Questions")
+
+
+## Information for ${answers.title} ##  
+=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
+
+## Description ## 
+${answers.description}
+
+## Installation ##
+${answers.installation}
+
+## Usage ##
+${answers.usage}
+
+## License ##
+${answers.license}
+
+## Contributing ##
+${answers.contribution}
+
+## Tests ##
+${answers.test_instructions}
+
+## Questions ##
+You can reach out with any questions by contacting me via GitHub: http://www.github.com/${answers.gituser} or via email: ${answers.email}
+
+ `;
+
+// Bonus using async/await and try/catch
+const init = async () => {
+  console.log("Let's Get This Read-Me Party Started! Please Answer the Following Questions...");
+  try {
+    const answers = await promptUser();
+
+    const html = gernateReadMe(answers);
+
+    await writeFileAsync('ReadmeHomework.md', html);
+
+    console.log('Successfully wrote to ReadmeHomework.md');
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 init();
-
-
-
-
-// const promptUser = () => {
-//   return inquirer.prompt([
-//     {
-//       type: 'input',
-//       name: 'name',
-//       message: 'What is your name?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'location',
-//       message: 'Where are you from?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'hobby',
-//       message: 'What is your favorite hobby?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'food',
-//       message: 'What is your favorite food?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'github',
-//       message: 'Enter your GitHub Username',
-//     },
-//     {
-//       type: 'input',
-//       name: 'linkedin',
-//       message: 'Enter your LinkedIn URL.',
-//     },
-//   ]);
-// };
-
-// const generateHTML = (answers) =>
-// `<!DOCTYPE html>
-// <html lang="en">
-// <head>
-//   <meta charset="UTF-8">
-//   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-//   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-//   <title>Document</title>
-// </head>
-// <body>
-//   <div class="jumbotron jumbotron-fluid">
-//   <div class="container">
-//     <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-//     <p class="lead">I am from ${answers.location}.</p>
-//     <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-//     <ul class="list-group">
-//       <li class="list-group-item">My GitHub username is ${answers.github}</li>
-//       <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-//     </ul>
-//   </div>
-// </div>
-// </body>
-// </html>`;
-
-// // Bonus using async/await and try/catch
-// const init = async () => {
-//   console.log('hi');
-//   try {
-//     const answers = await promptUser();
-
-//     const html = generateHTML(answers);
-
-//     await writeFileAsync('index.html', html);
-
-//     console.log('Successfully wrote to index.html');
-//   } catch (err) {
-//     console.log(err);
-//   }
-// };
-
-// init();
