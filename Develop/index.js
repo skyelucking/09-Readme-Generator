@@ -63,13 +63,23 @@ const promptUser = () => {
   ]);
 };
 
+const badgeMap = {
+    MIT: '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  (https://opensource.org/licenses/MIT)',
+    GNU: '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)  (https://www.gnu.org/licenses/gpl-3.0)',
+    ISC: '![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)  (https://opensource.org/licenses/ISC)',
+    Mozilla: '![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)',
+    Unlicense: '![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)  (http://unlicense.org/)',
+}
+
+
 const gernateReadMe = (answers) =>
 
 `
-
 +-+-+-+-+-+-+ Software License -+-+-+-+-+-+-+-+-+-+
 
-${answers.license}: 
+License Type:  ${answers.license}
+
+ ${badgeMap[answers.license]}
 
 =^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
 # Table of Contents for ${answers.title} # 
