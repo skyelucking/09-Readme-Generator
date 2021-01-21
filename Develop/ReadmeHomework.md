@@ -1,41 +1,49 @@
 
 +-+-+-+-+-+-+ Software License -+-+-+-+-+-+-+-+-+-+
 
-License Type:  Mozilla
+License Type:  Unlicense
 
- ![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
+ ![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)  (http://unlicense.org/)
 
-=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
-# Table of Contents for asdf # 
+=^..^=   =^..^=   # TOC #   =^..^=    =^..^=    =^..^=    =^..^=
+# Table of Contents for Good Readme Generator # 
 * [Description](##Description "Project Description")
 * [Installation](##Installation "Project Installation")
 * [Usage](##Usage "Usage Guidlines")
 * [Testing Guidelines](##Tests  "Testing Guidelines")
 * [Questions](##Questions  "Questions")
+* [Joke](##Joke  "Joke")
 
-
-## Information for asdf ##  
+## Information for Good Readme Generator ##  
 =^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
 
 ## Description ## 
-asdf
+This application will produce a quality Readme file based on input from a user. 
+
 
 ## Installation ##
-asdf
+Download the files from the associated GitHub Repo: https://github.com/skyelucking/09-Readme-Generator
 
 ## Usage ##
-asdf
+Anyone may use this application to create a good Readme file
 
 ## License ##
-Mozilla
+Unlicense
 
 ## Contributing ##
-asdf
+This was created by https://github.com/skyelucking
 
 ## Tests ##
-asdf
+Download the files from this GitHub repo, run the index.js Node file and input the information needed. Then, view the generated Readme file to see if everything is there as you expected. 
 
 ## Questions ##
-You can reach out with any questions by contacting me via GitHub: http://www.github.com/asdf or via email: asdf
+You can reach out with any questions by contacting me via GitHub: http://www.github.com/skyelucking or via email: lucking.skye@gmail.com
 
+=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
+## Joke ##  
+Why don't shrimp ever donate to charity?
+
+What do you expect...they're SHELLFISH! 
+
+__
  

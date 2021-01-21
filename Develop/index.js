@@ -59,9 +59,20 @@ const promptUser = () => {
             "Unlicense",
         ],
       },
-        
+      {
+        type: 'input',
+        name: 'joke',
+        message: 'What is your favorite safe-for-work joke? (punchline on next question)',
+      },
+      {
+        type: 'input',
+        name: 'punchline',
+        message: 'What is the punchline to your favorite safe for work joke?',
+      },
+              
   ]);
 };
+
 
 const badgeMap = {
     MIT: '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  (https://opensource.org/licenses/MIT)',
@@ -81,20 +92,21 @@ License Type:  ${answers.license}
 
  ${badgeMap[answers.license]}
 
-=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
+=^..^=   =^..^=   # TOC #   =^..^=    =^..^=    =^..^=    =^..^=
 # Table of Contents for ${answers.title} # 
 * [Description](##Description "Project Description")
 * [Installation](##Installation "Project Installation")
 * [Usage](##Usage "Usage Guidlines")
 * [Testing Guidelines](##Tests  "Testing Guidelines")
 * [Questions](##Questions  "Questions")
-
+* [Joke](##Joke  "Joke")
 
 ## Information for ${answers.title} ##  
 =^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
 
 ## Description ## 
 ${answers.description}
+
 
 ## Installation ##
 ${answers.installation}
@@ -114,6 +126,13 @@ ${answers.test_instructions}
 ## Questions ##
 You can reach out with any questions by contacting me via GitHub: http://www.github.com/${answers.gituser} or via email: ${answers.email}
 
+=^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
+## Joke ##  
+${answers.joke}
+
+${answers.punchline}
+
+__
  `;
 
 // Bonus using async/await and try/catch
