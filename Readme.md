@@ -5,10 +5,6 @@ License Type:  Unlicense
 
  ![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)  (http://unlicense.org/)
 
-=^..^=   =^..^=   # TOC #   =^..^=    =^..^=    =^..^=    =^..^=
-
-
-
 ## Information for Good Readme Generator ##  
 =^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
 
@@ -43,7 +39,7 @@ You can reach out with any questions by contacting me via GitHub: http://www.git
 ## Joke ##  
 Why don't shrimp ever donate to charity?
 
-What do you expect...they're SHELLFISH! 
+What do you expect...they're **SHELLFISH**! 
 
 __
  
