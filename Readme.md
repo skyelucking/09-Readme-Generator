@@ -6,13 +6,8 @@ License Type:  Unlicense
  ![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)  (http://unlicense.org/)
 
 =^..^=   =^..^=   # TOC #   =^..^=    =^..^=    =^..^=    =^..^=
-# Table of Contents for Good Readme Generator # 
-* [Description](##Description "Project Description")
-* [Installation](##Installation "Project Installation")
-* [Usage](##Usage "Usage Guidlines")
-* [Testing Guidelines](##Tests  "Testing Guidelines")
-* [Questions](##Questions  "Questions")
-* [Joke](##Joke  "Joke")
+
+
 
 ## Information for Good Readme Generator ##  
 =^..^=   =^..^=   =^..^=    =^..^=    =^..^=    =^..^=    =^..^=
@@ -20,6 +15,11 @@ License Type:  Unlicense
 ## Description ## 
 This application will produce a quality Readme file based on input from a user. 
 
+## Screen Shots ##
+Input:
+<img src="Assets/SS1.png"> 
+Output:
+<img src="Assets/SS2.png">
 
 ## Installation ##
 Download the files from the associated GitHub Repo: https://github.com/skyelucking/09-Readme-Generator
